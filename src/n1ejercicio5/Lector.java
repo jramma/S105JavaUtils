@@ -1,4 +1,4 @@
-package n1ejercicio4;
+package n1ejercicio5;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class Lector {
+public class Lector{
 	static Scanner sc = new Scanner(System.in);
 
 	public static void ordenAlfabetico(File carpeta) throws IOException {
@@ -118,6 +118,25 @@ public class Lector {
 			e.printStackTrace();
 		}
 	}
+
+//	public static void serilizarObjeto(String carpeta) implements Serializable {
+//		String texto= "";
+//		texto.toCharArray();
+//		try {
+//			if (carpeta.isDirectory()) {
+//				File[] lista = carpeta.listFiles();
+//				for (int i = 0; i < lista.length; i++) {
+//					texto =texto+lista[i].toString()+"\n";
+//					if (lista[i].isDirectory()) {
+//						texto= texto+lista[i]+"\n";
+//					}
+//				}
+//
+//			}
+//		} catch (NullPointerException e) {
+//			e.getMessage();
+//		}		
+//	}
 
 	
 

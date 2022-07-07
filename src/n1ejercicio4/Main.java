@@ -3,20 +3,13 @@ package n1ejercicio4;
 //import java.io.File;
 import java.io.IOException;
 
+import n1ejercicio5.Lector;
+
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		//String busqueda = "C:\\Users";
-		//File carpeta = new File("C:\\Users");
-		//Lector.leerRecursivamente(carpeta);		
-		if(Entrada.leerSiNo("Quieres leer un fichero txt?")) {
-			Lector.leerTxt(Entrada.leerString("Indique el directorio del txt"));
 
-		}else {
-			System.out.println("Fins aviat.");
-		}
-		
-		
-		
+		Lector.leerTxt("src/busqueda.txt");
+
 	}
 }
