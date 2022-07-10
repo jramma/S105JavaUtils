@@ -30,7 +30,7 @@ public class Main {
 			// hay que hacer un casting porque te devuelve un tipo Object
 			Objeto[] objetosDeserializados = (Objeto[]) recuperarObjeto.readObject();
 			recuperarObjeto.close();
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < 2; i++) {
 				System.out.println(objetosDeserializados[i]);
 			}
 		} catch (Exception e) {
