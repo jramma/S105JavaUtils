@@ -3,18 +3,16 @@ package n1ejercicio1;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class Lector {
-	static Scanner sc = new Scanner(System.in);
-
+		
 	public static void ordenAlfabetico(String archivo) {
 		ArrayList<String> nombresArchivos = new ArrayList<String>();
 
 		File carpeta = new File(archivo);
 		String[] listado = carpeta.list();
 		if (listado == null || listado.length == 0) {
-			System.out.println("No hay elementos dentro de la carpeta actual");
+			System.out.println("Not found.");
 			return;
 		} else {
 			for (int i = 0; i < listado.length; i++) {

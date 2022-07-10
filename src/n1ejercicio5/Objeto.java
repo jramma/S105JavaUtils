@@ -4,9 +4,11 @@ import java.io.Serializable;
 
 public class Objeto implements Serializable {
 	private int nombre;
+	private String a;
 
-	public Objeto(int nombre) {
+	public Objeto(int nombre, String a) {
 		this.nombre = nombre;
+		this.a = a;
 	}
 
 	public int getNombre() {
@@ -19,7 +21,15 @@ public class Objeto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Objeto [nombre=" + nombre + "]";
+		return "Objeto [nombre=" + nombre +"a>"+a+ "]";
+	}
+
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
 	}
 	
 	
