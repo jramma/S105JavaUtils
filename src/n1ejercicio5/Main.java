@@ -21,12 +21,12 @@ public class Main {
 		// creamos el archivo src:
 		try {
 			ObjectOutputStream listaSrc = new ObjectOutputStream(
-					new FileOutputStream("C:\\Users\\joser\\Desktop\\srcCarpeta"));
+					new FileOutputStream(archivoSer));
 			listaSrc.writeObject(objetos);
 			listaSrc.close();
 			// deserializamos el archivo src:
 			ObjectInputStream recuperarObjeto = new ObjectInputStream(
-					new FileInputStream("C:\\\\Users\\\\joser\\\\Desktop\\\\srcCarpeta"));
+					new FileInputStream(archivoSer));
 			// hay que hacer un casting porque te devuelve un tipo Object
 			Objeto[] objetosDeserializados = (Objeto[]) recuperarObjeto.readObject();
 			recuperarObjeto.close();
