@@ -31,7 +31,7 @@ public class Main {
 			}
 		}
 		Collections.sort(nombresArchivos);
-		System.out.println("En orden alfabético");
+		System.out.println("En orden alfabético:");
 		System.out.println(nombresArchivos);
 
 	}
