@@ -24,12 +24,25 @@ si es un directorio o fichero lo que encuentra en la búsqueda e indica la últi
 
 >> n1ejercicio3
 - Hace lo mismo que el anterior pero esta vez nos crea un archivo txt en la carpeta "src" del programa java con 
-el resultado (esta vez he creado una carpeta "D:\a" con poco contenido como ejemplo):
+el resultado (esta vez he usado la carpeta "C:\Users\joser"):
 
-![image](https://user-images.githubusercontent.com/107991714/179771859-9ea6f7c0-2e50-4763-8c7e-04e4e4848627.png)
+![image](https://user-images.githubusercontent.com/107991714/179780339-8773b44f-a742-407d-af67-8020fe8ec96a.png)
 
 - El archivo "busqueda" es el resultado:
 
 ![image](https://user-images.githubusercontent.com/107991714/179772207-fca4f94c-7ab6-4fe0-af62-9e0379c3714c.png)
+
+>> n1ejercicio4
+- Este lee cualquier fichero txt que creemos. Yo he creado el archivo "D:\a\HelloWorld.txt" que contiene el texto "Hello World":
+
+![image](https://user-images.githubusercontent.com/107991714/179783497-e6bdcc59-ea3e-4150-8d9f-657df18d92d1.png)
+
+
+>> n1ejercicio5
+- Este último ejercicio serializa un Objeto de Java en un fichero.ser, con los anteriores 
+tiene que ver en cuanto a lo de serializar. Si lo ejecutamos en eclipse vemos como crea el archivo "listaSrc.src"
+y lo deserializa después mostrandolo por consola.
+
+
 
 
