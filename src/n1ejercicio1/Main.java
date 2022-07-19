@@ -25,7 +25,6 @@ public class Main {
 		String[] listado = carpeta.list();
 		if (listado == null || listado.length == 0) {
 			System.out.println("Not found.");
-			return;
 		} else {
 			for (int i = 0; i < listado.length; i++) {
 				nombresArchivos.add(listado[i]);
