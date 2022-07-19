@@ -30,9 +30,9 @@ public class Main {
 				nombresArchivos.add(listado[i]);
 			}
 		}
-		Collections.sort(nombresArchivos);
-		System.out.println("En orden alfabético:");
-		System.out.println(nombresArchivos);
+		
+		Collections.sort(nombresArchivos);		
+		nombresArchivos.forEach(n->  System.out.println("- " +n));
 
 	}
 }
