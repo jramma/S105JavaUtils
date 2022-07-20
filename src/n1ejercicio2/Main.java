@@ -46,14 +46,14 @@ public class Main {
 				for (int i = 0; i < lista.length; i++) {
 
 					System.out.println(lista[i].getName());
+					ultimaModificacion(lista[i]);
+					System.out.println(">>es un archivo tipo F");
+
 					if (lista[i].isDirectory()) {
 						ordenAlfabetico(lista[i]);
 						leerRecursivamente(lista[i]);
 					}
 				}
-
-			} else {
-				System.out.println(carpeta.toString() + "es un archivo tipo F");
 
 			}
 		} catch (NullPointerException e) {
