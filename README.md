@@ -43,6 +43,11 @@ el resultado (esta vez he usado la carpeta "C:\Users\joser"):
 tiene que ver en cuanto a lo de serializar. Si lo ejecutamos en eclipse vemos como crea el archivo "listaSrc.src"
 y lo deserializa después mostrandolo por consola.
 
+>>n2ejercicio1
+- Hace lo mismo que el ejercicio 3 pero crea un archivo tipo .properties "dataBusqueda.properties":
+![image](https://user-images.githubusercontent.com/107991714/180054320-83581905-2e05-4da7-ba6b-50c70813cee7.png)
+
+
 
 
 
