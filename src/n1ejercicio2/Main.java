@@ -11,19 +11,17 @@ import java.util.GregorianCalendar;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		if (args.length > 0) {					
+		if (args.length > 0) {
 			File carpeta = new File(args[0]);
 			leerRecursivamente(carpeta);
 		} else {
 			System.out.println("no especifico la ruta del archivo");
 		}
-		
-		
+
 	}
 
 	private static void ordenAlfabetico(File archivo) {
 		ArrayList<String> nombresArchivos = new ArrayList<String>();
-
 		String[] listado = archivo.list();
 		if (listado == null || listado.length == 0) {
 			System.out.println("Not found.");
@@ -32,17 +30,18 @@ public class Main {
 				nombresArchivos.add(listado[i]);
 			}
 		}
-		
-		Collections.sort(nombresArchivos);		
-		nombresArchivos.forEach(n->  System.out.println("- " +n));
 
+		Collections.sort(nombresArchivos);
+		nombresArchivos.forEach(n -> System.out.println("- " + n));
+		nombresArchivos.removeAll(nombresArchivos);
 	}
 
 	public static void leerRecursivamente(File carpeta) {
-		ultimaModificacion(carpeta.toString());
+		ultimaModificacion(carpeta);
 		try {
 			ordenAlfabetico(carpeta);
 			if (carpeta.isDirectory()) {
+				System.out.println(carpeta.toString() + ">>Es un directorio D");
 				File[] lista = carpeta.listFiles();
 				for (int i = 0; i < lista.length; i++) {
 
@@ -53,6 +52,9 @@ public class Main {
 					}
 				}
 
+			} else {
+				System.out.println(carpeta.toString() + "es un archivo tipo F");
+
 			}
 		} catch (NullPointerException e) {
 			e.getMessage();
@@ -60,23 +62,13 @@ public class Main {
 
 	}
 
-	private static void ultimaModificacion(String archivo) {
-		File contenido = new File(archivo);
-		if (contenido.exists()) {
-			if (contenido.isFile()) {
-				System.out.println(contenido.toString() + "es un archivo tipo F");
-			}
-			if (contenido.isDirectory()) {
-				System.out.println(contenido.toString() + "es un directorio tipo D");
-			}
-			long ms = contenido.lastModified();
-			Date d = new Date(ms);
-			Calendar c = new GregorianCalendar();
-			c.setTime(d);
-			System.out.println("Ultima modificacion " + c.get(Calendar.DATE) + " " + c.get(Calendar.MONTH) + " "
-					+ c.get(Calendar.YEAR));
-		} else {
-			System.out.println(archivo+" no existe");
-		}
+	private static void ultimaModificacion(File archivo) {
+		long ms = archivo.lastModified();
+		Date d = new Date(ms);
+		Calendar c = new GregorianCalendar();
+		c.setTime(d);
+		System.out.println("Ultima modificacion " + c.get(Calendar.DATE) + " " + c.get(Calendar.MONTH) + " "
+				+ c.get(Calendar.YEAR));
+
 	}
 }
