@@ -4,15 +4,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
+
 
 public class Main {
-	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
 		if (args.length > 0) {					
 			ordenAlfabetico(args[0]);
-			sc.close();
 		} else {
 			System.out.println("no especifico la ruta del archivo");
 		}
