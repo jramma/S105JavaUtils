@@ -21,20 +21,21 @@ public class Main {
 		
 	}
 
-	public static void ordenAlfabetico(File carpeta) {
+	private static void ordenAlfabetico(File archivo) {
 		ArrayList<String> nombresArchivos = new ArrayList<String>();
-		String[] listado = carpeta.list();
+
+		String[] listado = archivo.list();
 		if (listado == null || listado.length == 0) {
-			System.out.println("No hay elementos dentro de la carpeta actual");
-			nombresArchivos = new ArrayList<String>();
+			System.out.println("Not found.");
 		} else {
 			for (int i = 0; i < listado.length; i++) {
 				nombresArchivos.add(listado[i]);
 			}
 		}
-		Collections.sort(nombresArchivos);
-		System.out.println("CONTENIDO ORDENADO ALFABETICAMENTE>");
-		System.out.println(nombresArchivos);
+		
+		Collections.sort(nombresArchivos);		
+		nombresArchivos.forEach(n->  System.out.println("- " +n));
+
 	}
 
 	public static void leerRecursivamente(File carpeta) {
@@ -75,7 +76,7 @@ public class Main {
 			System.out.println("Ultima modificacion " + c.get(Calendar.DATE) + " " + c.get(Calendar.MONTH) + " "
 					+ c.get(Calendar.YEAR));
 		} else {
-			System.out.println("no existe");
+			System.out.println(archivo+" no existe");
 		}
 	}
 }
